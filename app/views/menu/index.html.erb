@@ -1,0 +1,70 @@
+<h1 class="center">Menu</h1>
+<hr>
+<!-- Section navigation -->
+<ul class="nav nav-pills">
+  <% @sections.each do |section| %>
+    <li class="nav-item">
+      <%= link_to(section.name, menu_path(section: section.name),
+                  class: "nav-link #{'active' if params[:section] == section.name}") %>
+    </li>
+  <% end %>
+</ul>
+<hr>
+  <% if @food_items.present? %>
+    <% @food_items.each do |food_item| %>
+    
+    <!-- Cards -->
+    <div class="card fooditems" style="width: 20rem; margin: 10px; float: left">
+      <!-- Image and effects -->
+      <div id="effect-1" class="effects clearfix">
+        <div class="img">        
+          <img class="card-img-top" src="<%= food_item.fake_image_url %>" id="<%= food_item.id %>">
+            <div class="overlay">
+                <a href="#" class="expand">+</a>
+                <a class="close-overlay hidden">x</a>
+            </div>
+        </div>      
+      </div>
+
+      <!-- Modal content -->
+      <div id="modal_<%= food_item.id %>" class="modal">
+
+        <div class="modal-content">
+          <h3><%= food_item.name %></h3>
+            <img src="<%= food_item.fake_image_url %>" style="width:400px; height:500px">
+
+            <%= form_for food_item.line_items.build, url: carts_add_path do |f| %>
+            <div class="form-group">
+              <%= f.hidden_field :food_item_id, value: food_item.id %>
+              <%= f.number_field :quantity, class: "form-control", required: true, min: 1, placeholder: 1 %>
+
+              <%= button_tag type: 'submit', class: "btn btn-success btn-block", id: "add" do %>
+                  <i class="fa fa-plus" aria-hidden="true"> Add</i>
+              <% end %>
+            <% end %>
+            </div>
+        </div>
+      </div>
+
+      <!-- Food Items Card Block -->
+      <div class="card-block">
+        <h4 class="card-title">
+          <%= food_item.name %>:<br> <%= number_to_currency(food_item.price, unit: "$") %>
+        </h4>
+        <p class="card-text"><%= food_item.description %></p>
+
+        <!-- Add Form -->
+        <%= form_for food_item.line_items.build, url: carts_add_path do |f| %>
+          <div class="form-group">
+            <%= f.hidden_field :food_item_id, value: food_item.id %>
+            <%= f.number_field :quantity, class: "form-control", required: true, min: 1, placeholder: 1 %>
+
+            <%= button_tag type: 'submit', class: "btn btn-success btn-block", id: "add" do %>
+                <i class="fa fa-plus" aria-hidden="true"> Add</i>
+            <% end %>
+        <% end %>
+          </div>
+      </div>
+    </div>
+    <% end %>
+  <% end %>

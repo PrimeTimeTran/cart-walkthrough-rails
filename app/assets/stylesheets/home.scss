@@ -1,0 +1,23 @@
+.jumbotron  {
+    background-color: #E0DFD5;
+    margin-top: 10px;
+    padding: 32px;
+    border-radius: 20px;
+    -webkit-box-shadow: 3px 3px 3px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    3px 3px 3px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         1px 1px 1px 0px rgba(50, 50, 50, 0.75);
+    img {
+        border-radius: 20px;
+    }
+} 
+
+.restaurant-image {
+  img {
+    width: 100%;
+  }
+}
+
+address {
+  padding: 10px;
+  background-color: #efefef;
+}

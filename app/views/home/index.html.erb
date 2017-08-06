@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="display-4">Welcome To</div>
+      <h1 class="display-3">Kathy's Kitchen</h1>
+      <blockquote class="blockquote-reverse">
+      <p class="mb-0">"I get way too much happiness from good food."</p>
+      <footer class="blockquote-footer">Elizabeth Olsen <cite title="Source Title"><a href="http://www.boomsbeat.com/articles/4116/20140517/50-interesting-facts-about-elizabeth-olsen-studied-drama-in-russia-famous-olsen-sisters-named-fashion-line-after-her.htm">Boom's Beat</a></cite></footer>
+    </blockquote>
+    </div>
+    <div class="col-md-6 restaurant-image jello">
+      <%= image_tag "MAY.jpg" %>
+    </div>
+  </div>
+  <p class="lead">
+    <%= link_to '<i class="fa fa-cutlery" aria-hidden="true"></i>&nbsp&nbspMenu'.html_safe, menu_path, class: "btn btn-secondary btn-lg" %>
+    <%= link_to '<i class="fa fa-phone" aria-hidden="true"></i>&nbsp&nbspContact Us'.html_safe, contact_us_path, class: "btn btn-secondary btn-lg" %>
+  </p>
+</div>
