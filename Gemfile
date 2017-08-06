@@ -49,5 +49,6 @@ gem "font-awesome-rails"
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'faker'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'rails-assets-tether'
 gem 'turbolinks', '~> 5.0.0'
 gem 'carrierwave', '~> 1.0'

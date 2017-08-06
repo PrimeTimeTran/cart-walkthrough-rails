@@ -1,5 +1,6 @@
 //= require turbolinks
 //= require jquery
+//= require tether
 //= require jquery_ujs
 //= require bootstrap
 //= require bootstrap-sprockets
