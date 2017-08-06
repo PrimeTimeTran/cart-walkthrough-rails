@@ -14,10 +14,11 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto";
+  color: #3E442B;
 }
 
 .fa {
-    color:#313638;
+    color:#3E442B;
 }
 .row {
   margin-top: 50px;
@@ -30,6 +31,17 @@ body {
     background-color: #F2E5D7;
 }
 
-body.home {
-  background-image: url('hcmc.jpg')
+.nav-pills {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 3px;
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 50px;
+}
+.nav-link {
+  color: #3E442B;
+}
+.nav-link.active {
+  background-color: #3E442B !important;
 }
