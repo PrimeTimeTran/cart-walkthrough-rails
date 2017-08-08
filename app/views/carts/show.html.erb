@@ -22,11 +22,11 @@
         <td>
           <%= number_to_currency(item.price) %>
         </td>
-          <%= form_for(item) do |f| %>
         <td>
+          <%= form_for(item) do |f| %>
           <%= f.number_field :quantity, style: 'text-align: right' %>
-        </td> 
           <% end %>
+        </td> 
         <td>
           <%= number_to_currency(item.quantity_price) %>
         </td>

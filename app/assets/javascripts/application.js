@@ -12,13 +12,12 @@ $(document).on("turbolinks:load", function() {
     function handler( event ) {
       const target = $( event.target );
         if ( target.is( "div.overlay" ) || target.is( "a.expand" )) {
-            console.log(target)
+            event.preventDefault();
             $('.effects').hide()
             target.parents(".effects").siblings(".modal").toggle();
         }
 
         if (target.is( ".modal" ) ) {
-            console.log("closing modal")
             $('.effects').show()
             target.toggle();        
         }
