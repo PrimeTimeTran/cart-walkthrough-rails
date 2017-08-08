@@ -1,0 +1,7 @@
+{
+  "application.js": "http://0.0.0.0:8080/packs/application.js",
+  "counter.css": "http://0.0.0.0:8080/packs/counter.css",
+  "counter.js": "http://0.0.0.0:8080/packs/counter.js",
+  "hello_react.js": "http://0.0.0.0:8080/packs/hello_react.js",
+  "server_rendering.js": "http://0.0.0.0:8080/packs/server_rendering.js"
+}
